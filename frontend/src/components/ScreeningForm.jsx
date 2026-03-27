@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import client from '../api/client';
 
 export default function ScreeningForm({ onResults }) {
   const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ export default function ScreeningForm({ onResults }) {
     nationality: '',
   });
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,18 +21,20 @@ export default function ScreeningForm({ onResults }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
 
-    // Placeholder for M2 integration
     try {
-      // POST to /api/v1/screen will be implemented in M2
-      console.log('Screening request:', formData);
-      onResults({
-        query: formData.name,
-        results: [],
-        message: 'Screening engine coming in Milestone 2',
+      const response = await client.post('/screen', {
+        name: formData.name,
+        dob: formData.dob || null,
+        nationality: formData.nationality || null,
       });
-    } catch (error) {
-      console.error('Screening error:', error);
+
+      onResults(response.data);
+    } catch (err) {
+      const errorMessage = err.response?.data?.error || err.message || 'Screening failed';
+      setError(errorMessage);
+      console.error('Screening error:', err);
     } finally {
       setLoading(false);
     }
@@ -95,12 +99,11 @@ export default function ScreeningForm({ onResults }) {
         </button>
       </form>
 
-      <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-sm text-blue-800">
-        <p>
-          <strong>M1 Status:</strong> Form ready. Matching engine will be
-          integrated in Milestone 2.
-        </p>
-      </div>
+      {error && (
+        <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded text-sm text-red-800">
+          <p><strong>Error:</strong> {error}</p>
+        </div>
+      )}
     </div>
   );
 }

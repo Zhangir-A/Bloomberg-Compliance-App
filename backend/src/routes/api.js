@@ -1,19 +1,13 @@
 import express from 'express';
+import { screen } from '../controllers/screeningController.js';
 
 const router = express.Router();
-
-// Placeholder endpoints - to be implemented in M2-M5
 
 /**
  * POST /api/v1/screen
  * Screen a person against sanctions and PEP databases
  */
-router.post('/screen', (req, res) => {
-  res.json({
-    message: 'Screening endpoint - coming in M2',
-    status: 'not_implemented',
-  });
-});
+router.post('/screen', screen);
 
 /**
  * GET /api/v1/alerts
