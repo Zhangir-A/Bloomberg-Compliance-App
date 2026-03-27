@@ -1,6 +1,26 @@
 pep_id,name_latin,name_cyrillic,position,organization,tier,start_date,end_date,is_active,source_urls
-PEP-KZ-00001,Nursultan Nazarbayev,Нұрсұлтан Назарбаев,First President,Office of Former President,1,1991-12-16,,TRUE,"https://akorda.kz,https://en.wikipedia.org"
-PEP-KZ-00002,Kassym-Jomart Tokayev,Қасым-Жомарт Тоқаев,President,Office of the President,1,2019-03-20,,TRUE,"https://akorda.kz"
-PEP-KZ-00003,Alikhan Smailov,Әлихан Смайылов,Prime Minister,Office of the Prime Minister,1,2022-09-06,,TRUE,"https://gov.kz"
-PEP-KZ-00004,Makhkamov Makhkam,Махкамов Махкам,Speaker,Parliament of Kazakhstan,2,2023-01-16,,TRUE,"https://parlam.kz"
-PEP-KZ-00005,Samruk Kazyna Investors,Samruk Kazyna,Chairman,Samruk-Kazyna JSC,2,2008-01-01,,TRUE,"https://sk.kz"
+PEP-KZ-00001,Nursultan Nazarbayev,Нұрсұлтан Назарбаев,First President,Office of Former President,1,1991-12-16,,TRUE,https://akorda.kz
+PEP-KZ-00002,Kassym-Jomart Tokayev,Қасым-Жомарт Тоқаев,President,Office of the President,1,2019-03-20,,TRUE,https://akorda.kz
+PEP-KZ-00003,Alikhan Smailov,Әлихан Смайылов,Prime Minister,Office of the Prime Minister,1,2022-09-06,,TRUE,https://gov.kz
+PEP-KZ-00004,Makhkamov Makhkam,Махкамов Махкам,Speaker of Parliament,Parliament of Kazakhstan,2,2023-01-16,,TRUE,https://parlam.kz
+PEP-KZ-00005,Serik Zhumangarin,Серик Жұманғарин,Deputy Prime Minister,Office of Prime Minister,2,2022-09-06,,TRUE,https://gov.kz
+PEP-KZ-00006,Almaty Kuantyrov,Алматы Қуантыров,Minister of Interior,Ministry of Interior,2,2023-06-01,,TRUE,https://gov.kz
+PEP-KZ-00007,Beibit Tokayev,Бейбіт Тоқаев,General Director,National Security Committee,1,2022-09-14,,TRUE,https://gov.kz
+PEP-KZ-00008,Saltanat Azirbayeva,Салтанат Азирбаева,Chairwoman,National Bank of Kazakhstan,2,2022-11-10,,TRUE,https://www.nationalbank.kz
+PEP-KZ-00009,Yerlan Koshanov,Ерлан Кошанов,Senate Chairman,Parliament of Kazakhstan,2,2021-01-08,,TRUE,https://parlam.kz
+PEP-KZ-00010,Kanat Bozumbayev,Қанат Бозымбаев,Minister of Energy,Ministry of Energy,2,2023-05-01,,TRUE,https://gov.kz
+PEP-KZ-00011,Tulkibayev Mukhtar,Тулқыбаев Мұхтар,Mayor of Almaty,Almaty City Government,2,2019-02-04,,TRUE,https://almaty.gov.kz
+PEP-KZ-00012,Kuldybayev Baurzhan,Құлдыбаев Бауржан,Mayor of Astana,Astana City Government,2,2023-01-16,,TRUE,https://astana.gov.kz
+PEP-KZ-00013,Amandyk Batalov,Амандық Баталов,Chairman,National Economy Committee,2,2020-01-01,,TRUE,https://www.economy.gov.kz
+PEP-KZ-00014,Darya Aigerikyzy,Дарья Айгерікізі,First Deputy Chairman,Central Election Commission,2,2021-12-22,,TRUE,https://www.election.kz
+PEP-KZ-00015,Timur Suleimenov,Тимур Сүлейменов,Chairman,Committee on Legal Issues,2,2023-03-21,,TRUE,https://parlam.kz
+PEP-KZ-00016,Nurlan Nigmatuly,Нұрлан Ниғматұлы,Minister of Finance,Ministry of Finance,2,2022-09-06,,TRUE,https://gov.kz
+PEP-KZ-00017,Sandybay Toksanbayev,Сандыбай Тоқсанбаев,Minister of Justice,Ministry of Justice,2,2023-09-01,,TRUE,https://gov.kz
+PEP-KZ-00018,Magzum Mirzagaliyev,Мағзум Мірзағалиев,Chairman,Agency for Regulation,2,2021-05-15,,TRUE,https://gov.kz
+PEP-KZ-00019,Erlan Orazalin,Ерлан Оразалин,Governor,Atyrau Region,2,2022-04-01,,TRUE,https://gov.kz
+PEP-KZ-00020,Sergaziy Makhmutov,Сергазий Махмутов,Governor,Mangystau Region,2,2023-01-01,,TRUE,https://gov.kz
+PEP-KZ-00021,Ramazan Mukambetov,Рамазан Мұқамбетов,Governor,Aktobe Region,2,2023-03-01,,TRUE,https://gov.kz
+PEP-KZ-00022,Yerbolat Abeliyev,Ербол Абелиев,Chairman,Samruk-Kazyna JSC,2,2021-12-16,,TRUE,https://sk.kz
+PEP-KZ-00023,Zhiguli Dairabayev,Жігулі Дайрабаев,Chairman,Kazakh Oil Board,2,2022-01-15,,TRUE,https://www.kmg.kz
+PEP-KZ-00024,Kairat Kelimbetov,Қайрат Келімбетов,Vice Minister,Ministry of Foreign Affairs,2,2023-02-01,,TRUE,https://gov.kz
+PEP-KZ-00025,Darkhan Kalybekov,Дарқан Қалыбеков,First Deputy Minister,Ministry of Internal Affairs,2,2022-10-01,,TRUE,https://gov.kz
