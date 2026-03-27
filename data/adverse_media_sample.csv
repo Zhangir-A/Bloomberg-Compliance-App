@@ -1,6 +1,21 @@
 alert_id,date,source,headline,summary,category,url
-ALERT-KZ-001,2024-03-15,Reuters,"Kazakhstan Corruption Case Filed Against Official","High-ranking government official faces charges in connection with embezzlement scheme","Corruption","https://reuters.com/article/kz"
-ALERT-KZ-002,2024-03-10,Associated Press,"Sanctions Imposed on Three Kazakhstan Oligarchs","US Treasury adds oligarchs to OFAC list for sanctions evasion","Sanctions","https://apnews.com/article"
-ALERT-KZ-003,2024-03-08,BBC,"Kazakhstan Bank Faces Money Laundering Investigation","Central bank launches probe into illicit fund transfers","Money Laundering","https://bbc.com/news"
-ALERT-KZ-004,2024-02-28,Financial Times,"Kazakhstan Firm Linked to Bribery Scheme","Company executives implicated in international bribery scandal","Fraud","https://ft.com/article"
-ALERT-KZ-005,2024-02-15,Eurasianet,"Kazakh Businessman Wanted for Tax Evasion","Interpol Red Notice issued for prominent businessman","Tax Evasion","https://eurasianet.org/article"
+ALERT-KZ-001,2026-03-15,Reuters,Kazakhstan Corruption Case Filed Against Official,High-ranking government official faces charges in connection with embezzlement scheme,Corruption,https://reuters.com/article/kz
+ALERT-KZ-002,2026-03-10,Associated Press,Sanctions Imposed on Three Kazakhstan Oligarchs,US Treasury adds oligarchs to OFAC list for sanctions evasion,Sanctions,https://apnews.com/article
+ALERT-KZ-003,2026-03-08,BBC,Kazakhstan Bank Faces Money Laundering Investigation,Central bank launches probe into illicit fund transfers,Money Laundering,https://bbc.com/news
+ALERT-KZ-004,2026-02-28,Financial Times,Kazakhstan Firm Linked to Bribery Scheme,Company executives implicated in international bribery scandal,Fraud,https://ft.com/article
+ALERT-KZ-005,2026-02-15,Eurasianet,Kazakh Businessman Wanted for Tax Evasion,Interpol Red Notice issued for prominent businessman,Tax Evasion,https://eurasianet.org/article
+ALERT-KZ-006,2026-02-10,RFE/RL,Kazakhstan Minister Under Investigation for Asset Concealment,Officials probe alleged hidden offshore accounts,Corruption,https://rferl.org/article
+ALERT-KZ-007,2026-01-28,OCCRP,Money Trail Reveals Kazakh Oil Deal Corruption,Investigation uncovers kickback scheme in petroleum contracts,Fraud,https://occrp.org/article
+ALERT-KZ-008,2026-01-20,Bloomberg,Kazakhstan PEP Family Linked to Sanctions Evasion,Relatives caught in scheme to bypass international restrictions,Sanctions,https://bloomberg.com/article
+ALERT-KZ-009,2026-01-15,Wall Street Journal,Astana Official Arrested on Bribery Charges,City administrator admits to accepting bribes from contractors,Corruption,https://wsj.com/article
+ALERT-KZ-010,2025-12-30,DW,Kazakhstan Court Convicts Businessman of Money Laundering,Three-year sentence handed down for illegal fund transfers,Money Laundering,https://dw.com/article
+ALERT-KZ-011,2025-12-20,AP,Kazakhstan Youth Official Fired Over Misconduct,Deputy director removed following ethics investigation,Misconduct,https://apnews.com/article
+ALERT-KZ-012,2025-12-10,Reuters,Kazakh Energy Company Penalized for Environmental Violations,Regulatory fine issued for pollution breach,Regulatory,https://reuters.com/article
+ALERT-KZ-013,2025-11-28,FT,Kazakhstan Bank Executive Admits to Fraud,Senior manager confesses to asset misappropriation,Fraud,https://ft.com/article
+ALERT-KZ-014,2025-11-15,Eurasianet,Almaty Mayor Faces Nepotism Allegations,Investigation launched over appointment of family member,Misconduct,https://eurasianet.org/article
+ALERT-KZ-015,2025-11-01,OCCRP,Kazakh PEP Connected to Organized Crime Network,Intelligence report links official to criminal organization,Organized Crime,https://occrp.org/article
+ALERT-KZ-016,2025-10-20,BBC,Kazakhstan Customs Official Caught in Bribery Sting,Undercover operation reveals corruption at border,Corruption,https://bbc.com/news
+ALERT-KZ-017,2025-10-10,Bloomberg,Sanctions Bust: Kazakhstan Firm Helped Iran Evade Restrictions,Company penalized for role in sanctions circumvention,Sanctions,https://bloomberg.com/article
+ALERT-KZ-018,2025-09-28,Wall Street Journal,Kazakhstan State Company Audit Reveals Embezzlement,Missing funds totaling millions uncovered,Embezzlement,https://wsj.com/article
+ALERT-KZ-019,2025-09-15,DW,Astana City Council Member Removed Over Conflict of Interest,Official violated ethics code through business dealings,Misconduct,https://dw.com/article
+ALERT-KZ-020,2025-09-01,Reuters,Kazakhstan Energy Minister Investigated for Corruption,Probe into alleged kickback scheme in contracts,Corruption,https://reuters.com/article

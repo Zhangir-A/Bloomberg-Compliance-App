@@ -1,5 +1,6 @@
 import express from 'express';
 import { screen } from '../controllers/screeningController.js';
+import { getAlerts, getCategories } from '../controllers/alertsController.js';
 
 const router = express.Router();
 
@@ -13,12 +14,13 @@ router.post('/screen', screen);
  * GET /api/v1/alerts
  * Get adverse media alerts with optional filters
  */
-router.get('/alerts', (req, res) => {
-  res.json({
-    message: 'Alerts endpoint - coming in M4',
-    status: 'not_implemented',
-  });
-});
+router.get('/alerts', getAlerts);
+
+/**
+ * GET /api/v1/alerts/categories
+ * Get list of available alert categories
+ */
+router.get('/alerts/categories', getCategories);
 
 /**
  * GET /api/v1/pep/:id
