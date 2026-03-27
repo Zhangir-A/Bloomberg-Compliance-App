@@ -1,0 +1,6 @@
+pep_id,name_latin,name_cyrillic,position,organization,tier,start_date,end_date,is_active,source_urls
+PEP-KZ-00001,Nursultan Nazarbayev,Нұрсұлтан Назарбаев,First President,Office of Former President,1,1991-12-16,,TRUE,"https://akorda.kz,https://en.wikipedia.org"
+PEP-KZ-00002,Kassym-Jomart Tokayev,Қасым-Жомарт Тоқаев,President,Office of the President,1,2019-03-20,,TRUE,"https://akorda.kz"
+PEP-KZ-00003,Alikhan Smailov,Әлихан Смайылов,Prime Minister,Office of the Prime Minister,1,2022-09-06,,TRUE,"https://gov.kz"
+PEP-KZ-00004,Makhkamov Makhkam,Махкамов Махкам,Speaker,Parliament of Kazakhstan,2,2023-01-16,,TRUE,"https://parlam.kz"
+PEP-KZ-00005,Samruk Kazyna Investors,Samruk Kazyna,Chairman,Samruk-Kazyna JSC,2,2008-01-01,,TRUE,"https://sk.kz"

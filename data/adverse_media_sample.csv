@@ -1,0 +1,6 @@
+alert_id,date,source,headline,summary,category,url
+ALERT-KZ-001,2024-03-15,Reuters,"Kazakhstan Corruption Case Filed Against Official","High-ranking government official faces charges in connection with embezzlement scheme","Corruption","https://reuters.com/article/kz"
+ALERT-KZ-002,2024-03-10,Associated Press,"Sanctions Imposed on Three Kazakhstan Oligarchs","US Treasury adds oligarchs to OFAC list for sanctions evasion","Sanctions","https://apnews.com/article"
+ALERT-KZ-003,2024-03-08,BBC,"Kazakhstan Bank Faces Money Laundering Investigation","Central bank launches probe into illicit fund transfers","Money Laundering","https://bbc.com/news"
+ALERT-KZ-004,2024-02-28,Financial Times,"Kazakhstan Firm Linked to Bribery Scheme","Company executives implicated in international bribery scandal","Fraud","https://ft.com/article"
+ALERT-KZ-005,2024-02-15,Eurasianet,"Kazakh Businessman Wanted for Tax Evasion","Interpol Red Notice issued for prominent businessman","Tax Evasion","https://eurasianet.org/article"
