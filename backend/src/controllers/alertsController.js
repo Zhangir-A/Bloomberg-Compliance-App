@@ -43,18 +43,29 @@ export async function getAlerts(req, res, next) {
       offset = 0,
     } = req.query;
 
-    // Validate limit
-    const parsedLimit = Math.min(parseInt(limit) || 50, 500);
-    const parsedOffset = parseInt(offset) || 0;
+    // Validate limit and offset
+    const parsedLimit = Math.max(1, Math.min(parseInt(limit) || 50, 500));
+    const parsedOffset = Math.max(0, parseInt(offset) || 0);
 
     // Build where clause
     const where = {};
 
     // Date range (default: last 90 days)
     const endDate = date_to ? new Date(date_to) : new Date();
-    const startDate = date_from
-      ? new Date(date_from)
-      : new Date(endDate.getTime() - 90 * 24 * 60 * 60 * 1000);
+    const startDate = date_from ? new Date(date_from) : new Date(endDate.getTime() - 90 * 24 * 60 * 60 * 1000);
+
+    // Validate dates
+    if (date_from && isNaN(startDate.getTime())) {
+      return res.status(400).json({
+        error: 'Invalid date_from format. Use YYYY-MM-DD',
+      });
+    }
+
+    if (date_to && isNaN(endDate.getTime())) {
+      return res.status(400).json({
+        error: 'Invalid date_to format. Use YYYY-MM-DD',
+      });
+    }
 
     where.date = {
       [Op.gte]: startDate,

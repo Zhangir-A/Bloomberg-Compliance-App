@@ -27,8 +27,8 @@ router.get('/alerts/categories', getCategories);
  * Get individual PEP profile details
  */
 router.get('/pep/:id', (req, res) => {
-  res.json({
-    message: 'PEP detail endpoint - coming in M3',
+  res.status(501).json({
+    message: 'PEP detail endpoint - coming in M5',
     status: 'not_implemented',
   });
 });
@@ -38,7 +38,7 @@ router.get('/pep/:id', (req, res) => {
  * Record screening decision (true/false positive, needs review)
  */
 router.post('/case', (req, res) => {
-  res.json({
+  res.status(501).json({
     message: 'Case decision endpoint - coming in M5',
     status: 'not_implemented',
   });

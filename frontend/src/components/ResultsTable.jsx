@@ -44,19 +44,37 @@ export default function ResultsTable({ results }) {
             </tr>
           </thead>
           <tbody>
-            {results.results.map((result, idx) => (
-              <tr key={idx} className="border-b border-gray-200 hover:bg-gray-50">
-                <td className="py-3 px-3 text-gray-900">{result.name}</td>
-                <td className="py-3 px-3 text-gray-600">{result.type}</td>
-                <td className="py-3 px-3">
-                  <ConfidenceBadge score={result.score} />
-                </td>
-                <td className="py-3 px-3 text-gray-600">{result.source}</td>
-                <td className="py-3 px-3">
-                  <CaseActions matchId={result.matchId} />
-                </td>
-              </tr>
-            ))}
+            {results.results.map((result) => {
+              // Determine source display based on result type
+              let sourceDisplay = '';
+              switch (result.sourceType) {
+                case 'SANCTIONS':
+                  sourceDisplay = result.listSource || '—';
+                  break;
+                case 'PEP':
+                  sourceDisplay = result.organization || '—';
+                  break;
+                case 'ADVERSE_MEDIA':
+                  sourceDisplay = result.source || '—';
+                  break;
+                default:
+                  sourceDisplay = '—';
+              }
+
+              return (
+                <tr key={result.match_id} className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="py-3 px-3 text-gray-900">{result.name}</td>
+                  <td className="py-3 px-3 text-gray-600">{result.sourceType}</td>
+                  <td className="py-3 px-3">
+                    <ConfidenceBadge score={result.score} />
+                  </td>
+                  <td className="py-3 px-3 text-gray-600">{sourceDisplay}</td>
+                  <td className="py-3 px-3">
+                    <CaseActions matchId={result.match_id} />
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

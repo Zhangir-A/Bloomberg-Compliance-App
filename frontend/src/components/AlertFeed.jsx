@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import client from '../api/client';
 
 export default function AlertFeed({ initialAlerts }) {
@@ -11,14 +11,20 @@ export default function AlertFeed({ initialAlerts }) {
     date_to: '',
   });
   const [categories, setCategories] = useState([]);
+  const isInitialMount = useRef(true);
 
-  // Fetch alerts on mount and when filters change
+  // Fetch categories on mount
   useEffect(() => {
-    fetchAlerts();
     fetchCategories();
+    fetchAlerts();
   }, []);
 
+  // Fetch alerts when filters change (but skip initial render)
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     fetchAlerts();
   }, [filters]);
 

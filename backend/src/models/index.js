@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 
+// Ensure environment variables are loaded (idempotent - safe to call multiple times)
 dotenv.config();
 
 const sequelize = new Sequelize(

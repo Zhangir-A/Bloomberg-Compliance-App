@@ -53,7 +53,7 @@ async function importSanctions() {
       list_date: row.list_date || today,
       dob: row.dob || null,
       nationality: row.nationality || null,
-      raw_data: JSON.stringify(row),
+      raw_data: row, // Sequelize automatically serializes objects to JSONB
     }));
 
     // Upsert records (update if exists, insert if new)

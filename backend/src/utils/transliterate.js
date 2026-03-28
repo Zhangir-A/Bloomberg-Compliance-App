@@ -2,6 +2,29 @@ import CyrillicToTranslit from 'cyrillic-to-translit-js';
 
 const cyrillicToLatin = new CyrillicToTranslit({ preset: 'ru' });
 
+// Kazakh-specific Cyrillic to Latin mappings
+// These characters are unique to Kazakh and not in Russian
+const kazakhMap = {
+  'Ә': 'A',
+  'ә': 'a',
+  'Ғ': 'G',
+  'ғ': 'g',
+  'Қ': 'K',
+  'қ': 'k',
+  'Ң': 'N',
+  'ң': 'n',
+  'Ө': 'O',
+  'ө': 'o',
+  'Ұ': 'U',
+  'ұ': 'u',
+  'Ү': 'U',
+  'ү': 'u',
+  'Һ': 'H',
+  'һ': 'h',
+  'І': 'I',
+  'і': 'i',
+};
+
 /**
  * Convert Cyrillic text to Latin characters
  * Handles Russian/Kazakh Cyrillic input
@@ -11,7 +34,14 @@ const cyrillicToLatin = new CyrillicToTranslit({ preset: 'ru' });
 export const toLatinChars = (text) => {
   if (!text) return '';
   try {
-    return cyrillicToLatin.transform(text).toLowerCase().trim();
+    // First handle Kazakh-specific characters
+    let processed = text;
+    Object.entries(kazakhMap).forEach(([cyrillic, latin]) => {
+      processed = processed.replace(new RegExp(cyrillic, 'g'), latin);
+    });
+
+    // Then handle Russian characters with the standard library
+    return cyrillicToLatin.transform(processed).toLowerCase().trim();
   } catch (err) {
     console.warn(`Transliteration error for "${text}":`, err.message);
     return text.toLowerCase().trim();

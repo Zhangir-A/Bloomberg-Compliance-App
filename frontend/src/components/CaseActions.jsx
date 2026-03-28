@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 export default function CaseActions({ matchId }) {
   const [decision, setDecision] = useState(null);
-  const [notes, setNotes] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (value) => {
@@ -11,7 +10,6 @@ export default function CaseActions({ matchId }) {
     console.log('Case decision:', {
       matchId,
       decision: value,
-      notes,
     });
     setSubmitted(true);
   };

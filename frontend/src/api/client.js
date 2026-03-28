@@ -10,28 +10,11 @@ const client = axios.create({
   },
 });
 
-// Request interceptor
-client.interceptors.request.use(
-  (config) => {
-    // Add auth token if available
-    const token = localStorage.getItem('authToken');
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
-
-// Response interceptor
+// Response error handler
 client.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
-      // Handle unauthorized
-      localStorage.removeItem('authToken');
-      window.location.href = '/login';
-    }
+    // Generic error handling - auth will be added in M5
     return Promise.reject(error);
   }
 );

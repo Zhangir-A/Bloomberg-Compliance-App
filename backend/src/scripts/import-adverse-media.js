@@ -3,7 +3,6 @@ import path from 'path';
 import { parse } from 'csv-parse/sync';
 import models from '../models/index.js';
 import dotenv from 'dotenv';
-import { v4 as uuidv4 } from 'uuid';
 
 dotenv.config();
 

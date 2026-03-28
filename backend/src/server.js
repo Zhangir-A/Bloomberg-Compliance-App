@@ -1,10 +1,12 @@
+import dotenv from 'dotenv';
+
+// Load environment variables first, before importing models
+dotenv.config();
+
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import models from './models/index.js';
 import apiRoutes from './routes/api.js';
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;

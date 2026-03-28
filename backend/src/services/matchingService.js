@@ -1,4 +1,4 @@
-import { calculateMatchScore, rankMatches, meetsThreshold } from '../utils/fuzzyMatch.js';
+import { calculateMatchScore, rankMatches, meetsThreshold, scoreToConfidenceLevel } from '../utils/fuzzyMatch.js';
 
 /**
  * Orchestrate fuzzy matching across multiple data sources
@@ -14,13 +14,10 @@ export async function fuzzyMatchCandidates(input, candidates, sourceType) {
     .map(candidate => ({
       ...candidate.toJSON ? candidate.toJSON() : candidate,
       score: calculateMatchScore(input, candidate.name_latin),
-      sourceType,
+      resultType: sourceType,
+      match_id: `${sourceType}-${candidate.id}`,
     }))
-    .filter(m => meetsThreshold(m.score, 50)) // Minimum 50% threshold
-    .map(m => ({
-      ...m,
-      match_id: `${sourceType}-${m.id}`,
-    }));
+    .filter(m => meetsThreshold(m.score, 50)); // Minimum 50% threshold
 
   return rankMatches(matches);
 }
@@ -65,22 +62,7 @@ export function combineResults(sanctionsMatches = [], pepMatches = [], mediaMatc
  */
 export function formatForResponse(matches, limit = 10) {
   return matches.slice(0, limit).map(match => {
-    let confidence = '';
-    let color = '';
-
-    if (match.score === 100) {
-      confidence = 'Exact Match';
-      color = 'red';
-    } else if (match.score >= 85) {
-      confidence = 'High Confidence';
-      color = 'yellow';
-    } else if (match.score >= 70) {
-      confidence = 'Medium Confidence';
-      color = 'yellow';
-    } else if (match.score >= 50) {
-      confidence = 'Low Confidence';
-      color = 'green';
-    }
+    const { level: confidence, color } = scoreToConfidenceLevel(match.score);
 
     // Build result object based on type
     const baseResult = {
